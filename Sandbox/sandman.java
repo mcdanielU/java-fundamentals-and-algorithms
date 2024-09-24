@@ -6,7 +6,8 @@ public class sandman {
 //        byte fret;
 //        fret = 127;
 //        System.out.println(fret);
-
+String s = new String("Uche");
+        System.out.println(s);
     }
 
 }
