@@ -9,13 +9,18 @@ class Customer {
         System.out.println("Customer constructor");
     }
 
+    public Customer(String name)
+    {
+        this.name = name;
+    }
+
     protected void makeAPayment(double paymentValue)
     {
         System.out.println("Payment made now");
         acctAmount = acctAmount - paymentValue;
     }
 
-    protected String getName()
+    protected String getCustomerName()
     {
         return name;
     }
@@ -39,10 +44,15 @@ class Member extends Customer{
         System.out.println("Member constrcutor is executed here");
     }
 
-    @Override
-    protected String getName()
+    public Member(String memberID, String customerName)
     {
-        return "Firedown";
+        super(customerName);
+        this.memberID = memberID;
+    }
+
+    protected String getMemberID()
+    {
+        return memberID;
     }
 
 }
@@ -50,10 +60,10 @@ class Member extends Customer{
 public class InheritConstructor
 {
     public static void main(String[] args) {
-       Member member = new Member();
-       Customer customer = new Customer();
-       member.setName("Uche");
-        System.out.println(member.getName());
+       Member member = new Member("14/1148", "Yemi");
+        System.out.println(member.getCustomerName());
+        System.out.println(member.getMemberID());
+
 
 
     }
