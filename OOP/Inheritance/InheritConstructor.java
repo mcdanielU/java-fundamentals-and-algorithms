@@ -1,5 +1,5 @@
-package OOP.Inheritance.CustomerInheritance;
-
+package OOP.Inheritance;
+/**This program demonstrates how classes inherit the constructors of the super class **/
 class Customer {
     private String name;
     private double acctAmount;
