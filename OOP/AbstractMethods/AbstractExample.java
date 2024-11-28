@@ -11,6 +11,22 @@ abstract class Super
     {
         System.out.println("Meth1 of Super");
     }
+
+    abstract public void meth2();
+}
+
+class Sub extends Super
+{
+    @Override
+    public void meth2()
+    {
+        System.out.println("Meth2");
+    }
 }
 public class AbstractExample {
+    public static void main(String[] args) {
+        Super sSuperRef = new Sub();
+
+        sSuperRef.meth2();
+    }
 }

@@ -39,7 +39,7 @@ class SmartTV extends TV
         System.out.println("Smart Tv is browsing ");
     }
 }
-public class DynamicDispatch {
+public class  DynamicDispatch {
 
     public static void main(String[] args) {
         TV Smarttv = new SmartTV();
