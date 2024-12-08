@@ -1,5 +1,5 @@
 package OOP.ClassesAndObjects;
-import java.util.Arrays;
+import java.util.Comparator;
 class LightClick
 {
     void tap(){};
