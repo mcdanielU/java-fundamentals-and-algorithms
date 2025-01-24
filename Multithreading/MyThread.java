@@ -4,25 +4,20 @@ package Multithreading;
      @Override
      public void run()
      {
-         int i =1;
-         while(true)
-         {
-             System.out.println(i);
-             i++;
-         }
+         System.out.println(45);
      }
-
 }
 //This is an infinite loop
 class RunMyThread{
     public static void main(String[] args) {
-        MyThread t = new MyThread();
-        t.start();
-        int i = 1;
-        while(true)
-        {
-            System.out.println(i+ "world");
-            i++;
-        }
+        Thread t = new Thread("Uche");
+        System.out.println(t.getThreadGroup());
+//        int i = 1;
+//        while(true)
+//        {
+//            System.out.println(i+ "world");
+//            i++;
+//        }
+
     }
 }

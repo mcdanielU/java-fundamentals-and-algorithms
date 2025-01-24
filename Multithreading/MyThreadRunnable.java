@@ -13,8 +13,13 @@ public class MyThreadRunnable implements Runnable{
     }
 }
 
+class AnotherThread extends Thread
+{
+
+}
+
 class RunMyThreadRunnable
 {
     MyThreadRunnable th = new MyThreadRunnable();
-
+    Thread t = new Thread(th);
 }
