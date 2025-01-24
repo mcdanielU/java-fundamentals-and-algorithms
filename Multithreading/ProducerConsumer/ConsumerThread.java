@@ -12,11 +12,15 @@ public class ConsumerThread extends Thread {
     @Override
     public void run()
     {
-        for (int i=0; i<=50; i++)
-        {
-            System.out.println("The value from the Object is "+  obj.getValue());
-
+            while(true) {
+                try {
+                    System.out.println("The value from the Object is " + obj.getValue());
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 
-}
+
