@@ -9,16 +9,12 @@ public class ProducerThread extends Thread {
 
     @Override
     public void run() {
-        int i =1;
-        while (true) {
-            System.out.println("Running producer thread and setting object value " + i);
-            try {
-                this.obj.setValue(i);
-                i++;
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+        int i = 1;
+        while(true){
+
+            obj.setValue(i);
+            i++;
+
         }
     }
 }
