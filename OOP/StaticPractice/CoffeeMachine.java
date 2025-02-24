@@ -15,7 +15,7 @@ public class CoffeeMachine {
     private float coffee;
     private float water;
 
-    private static CoffeeMachine waterlooMachineConfig = null;
+    public static CoffeeMachine waterlooMachineConfig = null;
     private CoffeeMachine(){
         coffee = 1;
         water = 1;

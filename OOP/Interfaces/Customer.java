@@ -1,5 +1,8 @@
 package OOP.Interfaces;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 interface Member{
     void callback();
 }
@@ -31,25 +34,27 @@ public class Customer implements Member{
         System.out.println("Customers registered "+name);
     }
 }
-
+class MyThread extends Thread {
+    public void run() {
+        try {
+            Thread.sleep(2000); // Blocking the thread (not main thread)
+            System.out.println("Task running on " + Thread.currentThread().getName());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        }
+}
 class CallBackImplementation
 {
 
 
-    public static void main(String[] args) {
-        Store store = new Store();
-
-        Runnable task1 = () -> store.registerMembers(new Customer("Uche"));
-        Runnable task2 = () -> store.registerMembers(new Customer("James"));
-        Runnable task3 = () -> store.registerMembers(new Customer("John"));
-
-        Thread t1 = new Thread(task1);
-        Thread t2 = new Thread(task2);
-        Thread t3 = new Thread(task3);
+    public static void main(String[] args) throws InterruptedException{
+        MyThread t1 = new MyThread();
+        System.out.println("Main thread starts");
 
         t1.start();
-        t2.start();
-        t3.start();
+        t1.join();
+        System.out.println("Main thread finished");
     }
 }
 
