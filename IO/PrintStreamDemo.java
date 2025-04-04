@@ -19,6 +19,7 @@ public class PrintStreamDemo {
         s.name = br.readLine();
         s.dept = br.readLine();
 
+
         System.out.println("Color "+s.color);
         System.out.println("Name "+s.name);
         System.out.println("Dept "+s.dept);

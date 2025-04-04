@@ -1,5 +1,4 @@
 package OOP.ClassesAndObjects;
-
 public class StaticPractice {
     static
     {
