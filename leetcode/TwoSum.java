@@ -24,8 +24,7 @@ public class TwoSum {
         return correctValues;
     }
 
-    public int[] HashMap() {
-    }
+
     public static void main(String[] args) {
 
      //Call either the bruteforce method here or the optimized method
