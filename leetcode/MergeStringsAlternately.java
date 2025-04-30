@@ -5,13 +5,12 @@ public class MergeStringsAlternately {
 
         StringBuilder mergedString = new StringBuilder();
         StringBuilder overflow = new StringBuilder();
-        StringBuilder ucheString = new StringBuilder("abcd");
-        StringBuilder amaraString = new StringBuilder("pq");
+        StringBuilder ucheString = new StringBuilder("cdf");
+        StringBuilder amaraString = new StringBuilder("a");
 
         if(ucheString.length() > amaraString.length())
         {
-            int difference = ucheString.length() - amaraString.length();
-            overflow.append(ucheString.substring(difference));
+            overflow.append(ucheString.substring(amaraString.length()));
         } else if (amaraString.length() > ucheString.length()) {
             overflow.append(amaraString.substring(ucheString.length()));
         }
